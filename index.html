@@ -10,131 +10,90 @@
       padding: 0;
       box-sizing: border-box;
     }
-    
+
     body {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
       background: #f5f1e8;
       color: #4a4a4a;
-      line-height: 1.6;
-      padding: 80px 40px;
+      line-height: 1.4;
+      padding: 20px;
     }
-    
+
     .container {
-      max-width: 600px;
-      margin: 0 auto;
+      max-width: none;
+      margin: 0;
     }
-    
+
     h1 {
-      font-size: 2.5rem;
-      font-weight: 400;
+      font-size: 1.5rem;
+      font-weight: 500;
       color: #3a3a3a;
-      margin-bottom: 10px;
-      letter-spacing: -0.02em;
+      margin-bottom: 8px;
     }
-    
+
     .bio {
-      font-size: 1.1rem;
+      font-size: 0.9rem;
       color: #5a5a5a;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
     }
-    
+
     details {
-      margin-bottom: 10px;
-      padding-bottom: 00px;
+      margin-bottom: 0;
+      padding-bottom: 0;
     }
-    
+
     summary {
-      font-size: 1.1rem;
+      font-size: 0.95rem;
       font-weight: 500;
       color: #3a3a3a;
       cursor: pointer;
       list-style: none;
       outline: none;
-      padding: 10px 0;
-      margin-bottom: 10px;
-      border-bottom: 1px solid #e8e0d1;
+      padding: 6px 0;
     }
-    
+
     summary::-webkit-details-marker {
       display: none;
     }
-    
-    summary:hover {
-      color: #2a2a2a;
-    }
-    
-    details[open] summary {
-      margin-bottom: 30px;
-    }
-    
+
     details ul {
       list-style: none;
       margin: 0;
       padding: 0;
     }
-    
+
     details li {
-      font-size: 1rem;
+      font-size: 0.85rem;
       color: #5a5a5a;
-      margin-bottom: 12px;
-      padding-left: 20px;
+      margin-bottom: 6px;
+      padding-left: 16px;
       position: relative;
     }
-    
+
     details li::before {
       content: '•';
       position: absolute;
       left: 0;
       color: #d4af37;
     }
-    
+
     .contact {
-      font-size: 1rem;
+      font-size: 0.85rem;
       color: #5a5a5a;
+      margin-top: 10px;
     }
-    
-    .contact a {
-      color: #5a5a5a;
-      text-decoration: none;
-      border-bottom: 1px solid #e8e0d1;
-      transition: border-color 0.3s ease;
-    }
-    
-    .contact a:hover {
-      border-bottom-color: #d4af37;
-    }
-    
+
     .separator {
-      margin: 0 12px;
+      margin: 0 6px;
       color: #9a9a9a;
-    }
-    
-    @media (max-width: 768px) {
-      body {
-        padding: 60px 20px;
-      }
-      
-      h1 {
-        font-size: 2rem;
-      }
-      
-      .contact {
-        line-height: 1.8;
-      }
-      
-      .separator {
-        display: block;
-        margin: 8px 0;
-      }
     }
   </style>
 </head>
 <body>
   <div class="container">
     <h1>Nathan Yuan</h1>
-    
     <p class="bio">I am an investigative journalist based in NYC.</p>
-    
+
     <details>
       <summary>Awards & Honors</summary>
       <ul>
@@ -147,7 +106,7 @@
         <li>(2023) Story of the Year, National Scholastic Press Association</li>
       </ul>
     </details>
-    
+
     <div class="contact">
       <a href="mailto:nyyuan8@gmail.com">nyyuan8@gmail.com</a>
       <span class="separator">|</span>
