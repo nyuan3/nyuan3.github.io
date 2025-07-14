@@ -19,9 +19,9 @@
       box-sizing: border-box;
     }
 
-    /* Hide vertical scrollbar */
+    /* Restore vertical scrollbar */
     html, body {
-      overflow-y: hidden;
+      /* overflow-y removed so scrollbar shows */
       background: var(--bg);
       color: var(--text);
       font-family: var(--font-serif);
@@ -33,9 +33,9 @@
     .container {
       max-width: 800px;
       margin: 0 auto;
-      overflow-y: auto; /* allow scrolling inside container if needed */
+      padding-right: 15px;
+      /* Removed overflow-y auto so scrolling happens on body */
       max-height: 100vh;
-      padding-right: 15px; /* prevent content cutoff with hidden scrollbar */
     }
 
     header {
@@ -57,41 +57,19 @@
       max-width: 650px;
     }
 
-    a.image-link {
-      display: block;
-      max-width: 100%;
-      margin-bottom: 1rem;
-      border-radius: 6px;
-      overflow: hidden;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      text-decoration: none;
-    }
-
-    a.image-link img {
-      width: 100%;
-      height: auto;
-      display: block;
-      border-radius: 6px;
-      transition: transform 0.3s ease;
-    }
-
-    a.image-link:hover img {
-      transform: scale(1.03);
-    }
-
-    h2.headline {
+    a.portfolio-link {
       font-size: 1.7rem;
       font-weight: 600;
-      color: var(--text);
-      margin-bottom: 0.25rem;
+      color: var(--accent);
+      text-decoration: none;
+      display: inline-block;
+      margin-bottom: 2.5rem;
     }
 
-    p.deck {
-      font-size: 1.05rem;
-      font-weight: 400;
-      color: #555;
-      margin-bottom: 2.5rem;
-      max-width: 650px;
+    a.portfolio-link:hover,
+    a.portfolio-link:focus {
+      text-decoration: underline;
+      color: #a67342;
     }
 
     details {
@@ -159,11 +137,11 @@
         font-size: 2rem;
       }
 
-      h2.headline {
+      a.portfolio-link {
         font-size: 1.4rem;
       }
 
-      .bio, p.deck {
+      .bio {
         font-size: 1rem;
       }
 
@@ -184,12 +162,9 @@
       <h1>Nathan Yuan</h1>
       <p class="bio">I am an investigative journalist in NYC.</p>
 
-      <a href="https://publicintegrity.org/education/unhoused-and-undercounted/gaps-in-social-services-are-leaving-homeless-youth-with-no-good-choices/" target="_blank" rel="noopener noreferrer" class="image-link">
-        <img src="images/Final-student-homelessness (1).jpg" alt="Student Homelessness Illustration" />
+      <a href="https://publicintegrity.org/education/unhoused-and-undercounted/gaps-in-social-services-are-leaving-homeless-youth-with-no-good-choices/" target="_blank" rel="noopener noreferrer" class="portfolio-link">
+        No good choices
       </a>
-
-      <h2 class="headline">No good choices</h2>
-      <p class="deck">In the U.S., funding to shelter teens and young adults experiencing homelessness is far outstripped by the need.</p>
     </header>
 
     <details>
