@@ -5,6 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Nathan Yuan</title>
   <style>
+    :root {
+      --bg: #fdf6f0;
+      --text: #111;
+      --accent: #c68f65;
+      --header: #444;
+      --font-serif: "Georgia", "Times New Roman", serif;
+    }
+
     * {
       margin: 0;
       padding: 0;
@@ -12,106 +20,103 @@
     }
 
     body {
-      font-family: Georgia, 'Times New Roman', Times, serif;
-      background: #f5f1e8;
-      color: #4a4a4a;
-      line-height: 1.4;
-      padding: 20px;
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-serif);
+      line-height: 1.6;
+      padding: 40px;
     }
 
     .container {
-      max-width: none;
-      margin: 0;
+      max-width: 800px;
+      margin: 0 auto;
     }
 
-    h1 {
-      font-size: 1.5rem;
-      font-weight: 500;
-      color: #3a3a3a;
-      margin-bottom: 8px;
+    header h1 {
+      font-size: 2.5rem;
+      font-weight: 400;
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.02em;
     }
 
-    .bio {
-      font-size: 0.9rem;
-      color: #5a5a5a;
-      margin-bottom: 12px;
+    .subhead {
+      font-size: 1rem;
+      color: var(--header);
+      margin-bottom: 2rem;
     }
 
-    details {
-      margin-bottom: 0;
-      padding-bottom: 0;
+    section {
+      margin-bottom: 2rem;
     }
 
-    summary {
-      font-size: 0.95rem;
-      font-weight: 500;
-      color: #3a3a3a;
-      cursor: pointer;
+    h2 {
+      font-size: 1.1rem;
+      color: var(--header);
+      margin-bottom: 0.5rem;
+      font-weight: normal;
+    }
+
+    ul {
       list-style: none;
-      outline: none;
-      padding: 6px 0;
+      padding-left: 1rem;
     }
 
-    summary::-webkit-details-marker {
-      display: none;
-    }
-
-    details ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-
-    details li {
-      font-size: 0.85rem;
-      color: #5a5a5a;
-      margin-bottom: 6px;
-      padding-left: 16px;
-      position: relative;
-    }
-
-    details li::before {
-      content: '•';
-      position: absolute;
-      left: 0;
-      color: #d4af37;
+    ul li::before {
+      content: "– ";
+      color: var(--accent);
     }
 
     .contact {
-      font-size: 0.85rem;
-      color: #5a5a5a;
-      margin-top: 10px;
+      font-size: 0.9rem;
+      margin-top: 3rem;
+    }
+
+    .contact a {
+      color: var(--text);
+      text-decoration: none;
     }
 
     .separator {
-      margin: 0 6px;
-      color: #9a9a9a;
+      margin: 0 8px;
+      color: #999;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 20px;
+      }
+
+      header h1 {
+        font-size: 2rem;
+      }
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>Nathan Yuan</h1>
-    <p class="bio">I am an investigative journalist based in NYC.</p>
+    <header>
+      <h1>Nathan Yuan</h1>
+      <p class="subhead">Investigative journalist based in New York City</p>
+    </header>
 
-    <details>
-      <summary>Awards & Honors</summary>
+    <section>
+      <h2>Awards & Honors</h2>
       <ul>
         <li>(2025) Sanford S. Parker Fellowship in Economics, Columbia University</li>
         <li>(2025) Phyllis Stevens Sharp Fellowship in American Politics, Columbia University</li>
-        <li>(2025) Eric J. Holder Initiative for Civil and Political Rights, Columbia University</li>
+        <li>(2025) Eric J. Holder Initiative for Civil and Political Rights</li>
         <li>(2024) Robert F. Kennedy Journalism Award</li>
-        <li>(2024) Victory Awardee, Chicago Coalition to End Homelessness</li>
+        <li>(2024) Victory Award, Chicago Coalition to End Homelessness</li>
         <li>(2024) Gary Marx Fellow, National Institute for Computer-Assisted Reporting</li>
         <li>(2023) Story of the Year, National Scholastic Press Association</li>
       </ul>
-    </details>
+    </section>
 
-    <div class="contact">
+    <footer class="contact">
       <a href="mailto:nyyuan8@gmail.com">nyyuan8@gmail.com</a>
       <span class="separator">|</span>
-      <a href="https://twitter.com/nathanyyuan" target="_blank" rel="noopener noreferrer">Twitter</a>
-    </div>
+      <a href="https://twitter.com/nathanyyuan" target="_blank">Twitter</a>
+    </footer>
   </div>
 </body>
 </html>
