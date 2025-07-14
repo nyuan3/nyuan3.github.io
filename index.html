@@ -5,93 +5,139 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Nathan Yuan – Biography</title>
   <style>
-    details {
-      margin-top: 0;
-      margin-bottom: 0;
-    }
-    details ul {
-      margin-top: 0;
-      margin-bottom: 0;
-    }
-    footer.contact {
-      margin-top: 0;
-    }
     body {
-      margin: 20px auto;
-      max-width: 650px;
+      margin: 0;
+      padding: 60px 80px;
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
         Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
       color: #222;
       background: #fff;
-      line-height: 1.4;
-      padding: 0 20px;
+      line-height: 1.6;
+      font-size: 18px;
     }
-    h1 {
+    
+    .container {
+      display: flex;
+      gap: 100px;
+      max-width: 1200px;
+    }
+    
+    .sidebar {
+      flex: 0 0 200px;
+      padding-top: 20px;
+    }
+    
+    .sidebar h1 {
       font-weight: 600;
-      font-size: 1.8rem;
-      margin-bottom: 0.1em;
-      text-align: left;
+      font-size: 2rem;
+      margin-bottom: 60px;
+      color: #222;
     }
-    a {
-      color: #0066cc;
-      text-decoration: none;
+    
+    .sidebar nav {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
     }
-    a:hover {
+    
+    .sidebar nav a {
+      color: #222;
       text-decoration: underline;
+      font-size: 18px;
+      font-weight: 400;
     }
-    details {
-      margin-top: 1em;
+    
+    .sidebar nav a:hover {
+      color: #0066cc;
     }
-    summary {
+    
+    .content {
+      flex: 1;
+      padding-top: 20px;
+    }
+    
+    .content p {
+      margin-bottom: 30px;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+    
+    .content h2 {
+      font-size: 18px;
       font-weight: 600;
-      font-size: 1.1rem;
-      cursor: pointer;
-      list-style: none;
-      outline: none;
-      padding: 0;
+      margin-top: 50px;
+      margin-bottom: 20px;
+      color: #222;
     }
-    summary::-webkit-details-marker {
-      display: none;
-    }
-    ul {
-      margin-top: 0.5em;
-      padding-left: 1.25em;
-    }
-    ul li {
-      margin-bottom: 0.3em;
-    }
-    .contact {
-      margin-top: 1em;
-      font-size: 1rem;
-    }
-    .contact a {
+    
+    .content ul {
       margin: 0;
+      padding-left: 0;
+      list-style: none;
     }
-    .separator {
-      margin: 0 8px;
-      color: #666;
+    
+    .content li {
+      margin-bottom: 8px;
+      font-size: 18px;
+    }
+    
+    .italic {
+      font-style: italic;
+    }
+    
+    @media (max-width: 768px) {
+      body {
+        padding: 40px 20px;
+      }
+      
+      .container {
+        flex-direction: column;
+        gap: 40px;
+      }
+      
+      .sidebar {
+        flex: none;
+      }
+      
+      .sidebar h1 {
+        margin-bottom: 30px;
+      }
+      
+      .sidebar nav {
+        flex-direction: row;
+        gap: 20px;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>Nathan Yuan</h1>
-  <p>I am an investigative journalist based in NYC.</p>
-  <details>
-    <summary>Awards & Honors</summary>
-    <ul>
-      <li>(2025) Sanford S. Parker Fellowship in Economics, Columbia University</li>
-      <li>(2025) Phyllis Stevens Sharp Fellowship in American Politics, Columbia University</li>
-      <li>(2025) Eric J. Holder Initiative for Civil and Political Rights, Columbia University</li>
-      <li>(2024) Robert F. Kennedy Journalism Award</li>
-      <li>(2024) Victory Awardee, Chicago Coalition to End Homelessness</li>
-      <li>(2024) Gary Marx Fellow, National Institute for Computer-Assisted Reporting</li>
-      <li>(2023) Story of the Year, National Scholastic Press Association</li>
-    </ul>
-  </details>
-  <footer class="contact">
-    <a href="mailto:nyyuan8@gmail.com">nyyuan8@gmail.com</a>
-    <span class="separator">|</span>
-    <a href="https://twitter.com/nathanyyuan" target="_blank" rel="noopener noreferrer">Twitter</a>
-  </footer>
+  <div class="container">
+    <div class="sidebar">
+      <h1>Nathan Yuan</h1>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#awards">Awards</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+    
+    <div class="content">
+      <p>I am an investigative journalist based in NYC, focusing on social justice issues and systemic inequities. My work examines the intersection of policy, community impact, and human stories that often go untold.</p>
+      
+      <h2>Awards/Honors/Recognitions/Fellowships</h2>
+      <ul>
+        <li>(2025) Sanford S. Parker Fellowship in Economics, Columbia University</li>
+        <li>(2025) Phyllis Stevens Sharp Fellowship in American Politics, Columbia University</li>
+        <li>(2025) Eric J. Holder Initiative for Civil and Political Rights, Columbia University</li>
+        <li>(2024) Robert F. Kennedy Journalism Award</li>
+        <li>(2024) Victory Awardee, Chicago Coalition to End Homelessness</li>
+        <li>(2024) Gary Marx Fellow, National Institute for Computer-Assisted Reporting</li>
+        <li>(2023) Story of the Year, National Scholastic Press Association</li>
+      </ul>
+      
+      <h2>Contact</h2>
+      <p><a href="mailto:nyyuan8@gmail.com">nyyuan8@gmail.com</a> | <a href="https://twitter.com/nathanyyuan" target="_blank" rel="noopener noreferrer">Twitter</a></p>
+    </div>
+  </div>
 </body>
 </html>
