@@ -62,12 +62,33 @@
       line-height: 1.6;
     }
     
-    .content h2 {
-      font-size: 18px;
+    details {
+      margin-top: 30px;
+    }
+    
+    summary {
       font-weight: 600;
-      margin-top: 50px;
-      margin-bottom: 20px;
+      font-size: 18px;
+      cursor: pointer;
+      list-style: none;
+      outline: none;
+      padding: 0;
       color: #222;
+    }
+    
+    summary::-webkit-details-marker {
+      display: none;
+    }
+    
+    details ul {
+      margin-top: 20px;
+      padding-left: 0;
+      list-style: none;
+    }
+    
+    details li {
+      margin-bottom: 8px;
+      font-size: 18px;
     }
     
     .content ul {
@@ -114,29 +135,25 @@
   <div class="container">
     <div class="sidebar">
       <h1>Nathan Yuan</h1>
-      <nav>
-        <a href="#about">About</a>
-        <a href="#awards">Awards</a>
-        <a href="#contact">Contact</a>
-      </nav>
     </div>
     
     <div class="content">
       <p>I am an investigative journalist based in NYC.</p>
       
-      <h2>Awards & Fellowships</h2>
-      <ul>
-        <li>(2025) Sanford S. Parker Fellowship in Economics, Columbia University</li>
-        <li>(2025) Phyllis Stevens Sharp Fellowship in American Politics, Columbia University</li>
-        <li>(2025) Eric J. Holder Initiative for Civil and Political Rights, Columbia University</li>
-        <li>(2024) Robert F. Kennedy Journalism Award</li>
-        <li>(2024) Victory Awardee, Chicago Coalition to End Homelessness</li>
-        <li>(2024) Gary Marx Fellow, National Institute for Computer-Assisted Reporting</li>
-        <li>(2023) Story of the Year, National Scholastic Press Association</li>
-      </ul>
+      <details>
+        <summary>Awards & Honors</summary>
+        <ul>
+          <li>(2025) Sanford S. Parker Fellowship in Economics, Columbia University</li>
+          <li>(2025) Phyllis Stevens Sharp Fellowship in American Politics, Columbia University</li>
+          <li>(2025) Eric J. Holder Initiative for Civil and Political Rights, Columbia University</li>
+          <li>(2024) Robert F. Kennedy Journalism Award</li>
+          <li>(2024) Victory Awardee, Chicago Coalition to End Homelessness</li>
+          <li>(2024) Gary Marx Fellow, National Institute for Computer-Assisted Reporting</li>
+          <li>(2023) Story of the Year, National Scholastic Press Association</li>
+        </ul>
+      </details>
       
-      <h2>Contact</h2>
-      <p><a href="mailto:nyyuan8@gmail.com">nyyuan8@gmail.com</a>|<a href="https://twitter.com/nathanyyuan" target="_blank" rel="noopener noreferrer">Twitter</a></p>
+      <p style="margin-top: 30px;"><a href="mailto:nyyuan8@gmail.com">nyyuan8@gmail.com</a> | <a href="https://twitter.com/nathanyyuan" target="_blank" rel="noopener noreferrer">Twitter</a></p>
     </div>
   </div>
 </body>
