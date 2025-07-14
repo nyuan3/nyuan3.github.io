@@ -20,6 +20,7 @@
     }
 
     html, body {
+      overflow-y: auto; /* Bring back vertical scrollbar */
       background: var(--bg);
       color: var(--text);
       font-family: var(--font-serif);
@@ -32,7 +33,6 @@
       max-width: 800px;
       margin: 0 auto;
       padding-right: 15px;
-      max-height: 100vh;
     }
 
     header {
@@ -54,35 +54,26 @@
       max-width: 650px;
     }
 
-    a.portfolio-link {
-      font-size: 1rem; /* smaller */
+    h2 {
+      font-size: 1.1rem;
       font-weight: 600;
-      color: black; /* black */
-      text-decoration: none;
+      color: var(--header);
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    a.portfolio-link, a.portfolio-sublink {
       display: inline-block;
+      font-weight: normal;
+      color: black;
+      font-size: 1rem;
+      text-decoration: none;
       margin-bottom: 0.5rem;
     }
 
     a.portfolio-link:hover,
-    a.portfolio-link:focus {
+    a.portfolio-sublink:hover {
       text-decoration: underline;
-      color: black;
-    }
-
-    a.portfolio-sublink {
-      font-size: 1rem;
-      font-weight: normal;
-      color: black;
-      text-decoration: none;
-      display: inline-block;
-      margin-top: 0.3rem;
-      margin-bottom: 2.5rem;
-    }
-
-    a.portfolio-sublink:hover,
-    a.portfolio-sublink:focus {
-      text-decoration: underline;
-      color: black;
     }
 
     details {
@@ -150,11 +141,13 @@
         font-size: 2rem;
       }
 
-      a.portfolio-link, a.portfolio-sublink {
-        font-size: 0.9rem;
+      h2 {
+        font-size: 1rem;
       }
 
-      .bio {
+      .bio,
+      a.portfolio-link,
+      a.portfolio-sublink {
         font-size: 1rem;
       }
 
@@ -175,15 +168,19 @@
       <h1>Nathan Yuan</h1>
       <p class="bio">I am an investigative journalist in NYC.</p>
 
-      <a href="https://publicintegrity.org/education/unhoused-and-undercounted/gaps-in-social-services-are-leaving-homeless-youth-with-no-good-choices/" target="_blank" rel="noopener noreferrer" class="portfolio-link">
+      <h2>journalism</h2>
+
+      <a href="https://publicintegrity.org/education/unhoused-and-undercounted/gaps-in-social-services-are-leaving-homeless-youth-with-no-good-choices/" 
+         target="_blank" rel="noopener noreferrer" class="portfolio-link">
         &quot;No good choices&quot;
       </a>
-
       <br />
-
-      <a href="https://www.centraltimes.org/uncategorized/2023/05/26/test-test/" target="_blank" rel="noopener noreferrer" class="portfolio-sublink">
+      <a href="https://www.centraltimes.org/uncategorized/2023/05/26/test-test/" 
+         target="_blank" rel="noopener noreferrer" class="portfolio-sublink">
         The hidden homeless
       </a>
+
+      <h2>research &amp; policy</h2>
     </header>
 
     <details>
