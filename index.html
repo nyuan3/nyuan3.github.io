@@ -35,35 +35,85 @@
     header h1 {
       font-size: 2.5rem;
       font-weight: 400;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.25rem;
       letter-spacing: -0.02em;
     }
 
-    .subhead {
-      font-size: 1rem;
-      color: var(--header);
+    header h2 {
+      font-size: 1.7rem;
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+      color: var(--text);
+    }
+
+    header p.deck {
+      font-size: 1.05rem;
+      font-weight: 400;
+      color: #555;
+      margin-bottom: 1.5rem;
+      max-width: 650px;
+    }
+
+    header img.headshot {
+      width: 140px;
+      border-radius: 50%;
+      margin-bottom: 1.5rem;
+      display: block;
+    }
+
+    a.image-link {
+      display: block;
+      max-width: 100%;
       margin-bottom: 2rem;
     }
 
-    section {
-      margin-bottom: 2rem;
+    a.image-link img {
+      width: 100%;
+      height: auto;
+      border-radius: 6px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      display: block;
     }
 
-    h2 {
+    details {
+      margin-bottom: 2rem;
+      cursor: pointer;
+    }
+
+    summary {
       font-size: 1.1rem;
       color: var(--header);
-      margin-bottom: 0.5rem;
       font-weight: normal;
+      list-style: none;
+      outline: none;
+      padding: 8px 0;
+      border-bottom: 1px solid #e8e0d1;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    details[open] summary {
+      font-weight: 600;
+      color: var(--accent);
     }
 
     ul {
       list-style: none;
       padding-left: 1rem;
+      margin-top: 0.8rem;
     }
 
     ul li::before {
       content: "– ";
       color: var(--accent);
+    }
+
+    ul li {
+      margin-bottom: 0.6rem;
+      font-size: 1rem;
+      color: #5a5a5a;
     }
 
     .contact {
@@ -89,6 +139,23 @@
       header h1 {
         font-size: 2rem;
       }
+
+      header h2 {
+        font-size: 1.3rem;
+      }
+
+      header p.deck {
+        font-size: 0.95rem;
+      }
+
+      .contact {
+        line-height: 1.8;
+      }
+
+      .separator {
+        display: block;
+        margin: 8px 0;
+      }
     }
   </style>
 </head>
@@ -96,11 +163,19 @@
   <div class="container">
     <header>
       <h1>Nathan Yuan</h1>
-      <p class="subhead">Investigative journalist based in New York City</p>
+      <h2>No good choices</h2>
+      <p class="deck">In the U.S., funding to shelter teens and young adults experiencing homelessness is far outstripped by the need.</p>
+
+      <!-- Optional headshot image -->
+      <img src="images/headshot.jpg" alt="Nathan Yuan" class="headshot" />
+
+      <a href="https://publicintegrity.org/education/unhoused-and-undercounted/gaps-in-social-services-are-leaving-homeless-youth-with-no-good-choices/" target="_blank" rel="noopener noreferrer" class="image-link">
+        <img src="images/Final-student-homelessness.webp" alt="Student Homelessness Illustration" />
+      </a>
     </header>
 
-    <section>
-      <h2>Awards & Honors</h2>
+    <details>
+      <summary>Awards & Honors</summary>
       <ul>
         <li>(2025) Sanford S. Parker Fellowship in Economics, Columbia University</li>
         <li>(2025) Phyllis Stevens Sharp Fellowship in American Politics, Columbia University</li>
@@ -110,7 +185,7 @@
         <li>(2024) Gary Marx Fellow, National Institute for Computer-Assisted Reporting</li>
         <li>(2023) Story of the Year, National Scholastic Press Association</li>
       </ul>
-    </section>
+    </details>
 
     <footer class="contact">
       <a href="mailto:nyyuan8@gmail.com">nyyuan8@gmail.com</a>
