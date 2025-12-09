@@ -217,7 +217,27 @@
       (2023) News Story of the Year, National Scholastic Press Association
     </header>
 
-    
+    <div data-uhy-quiz>
+  <div class="uhyq-fallback" role="note">
+    <p>
+      <strong>This tool needs JavaScript.</strong>
+      If the quiz does not load, visit
+      <a href="https://schoolhouseconnection.org" target="_blank" rel="noopener noreferrer">
+        SchoolHouseConnection.org
+      </a>
+      for resources.
+    </p>
+  </div>
+</div>
+
+    <script src="https://nyuan3.github.io/uhy-quiz/uhy-quiz.js" defer></script>
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    if (window.UHYQuiz) {
+      window.UHYQuiz.init();
+    }
+  });
+</script>
         
 
     <footer class="contact">
